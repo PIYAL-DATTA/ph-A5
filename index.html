@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- tailwindcss -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sora:wght@100..800&display=swap"
+        rel="stylesheet">
+    <style>
+        .poppins {
+            font-family: "Sora", sans-serif;
+            font-optical-sizing: auto;
+            font-style: normal;
+        }
+    </style>
+</head>
+
+<body id="body" class="bg-[#F4F7FF] poppins mb-6">
+    <div class="container mx-auto">
+        <div class="card bg-white rounded-lg my-[24px]">
+            <div class="card-body p-4 flex justify-between">
+                <div class="flex items-center">
+                    <img src="assets/logo.png" class="pr-1.5">
+                    <p class="poppins font-light text-3xl">Dev<span class="font-bold">Board</span></p>
+                </div>
+                <div class="w-[225px] flex items-center justify-between">
+                    <div class="flex items-center bg-[#F4F7FF] rounded-full p-3">
+                        <img src="assets/checkbox.png" class="pr-4">
+                        <p id="done" class="text-[32px] poppins font-bold">23</p>
+                    </div>
+                    <div id="theme" class="flex items-center justify-center bg-[#F4F7FF] rounded-full p-3">
+                        <img src="assets/theme-btn.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grid grid-cols-4 gap-6">
+            <div class="col-span-3 bg-white rounded-lg">
+                <div class="p-6">
+                    <div class="grid grid-cols-[1fr_2fr_1fr] gap-6">
+                        <div class="bg-[#F4F7FF] rounded-lg">
+                            <div class="flex items-center justify-center h-full">
+                                <div class="bg-white rounded-full p-3 mr-[20px]">
+                                    <img src="assets/checkbox.png">
+                                </div>
+                                <p class="text-base font-medium poppins">Task Assigned<br><span id="task"
+                                        class="font-bold text-[32px]">06</span></p>
+                            </div>
+                        </div>
+                        <div onclick="back()" class="bg-gradient-to-r from-[#3752FD] to-[#9BA8F8] rounded-lg">
+                            <div class="flex flex-row items-center">
+                                <img src="assets/board.png" class="p-6">
+                                <p class="text-2xl poppins font-medium text-white">Discover Something<br>New Today!</p>
+                            </div>
+                        </div>
+                        <script>
+                            function back(){
+                                window.location.assign('Q&A.html');
+                            }
+                          </script>
+                        <div class="bg-[#F4F7FF] rounded-lg">
+                            <div class="flex items-center justify-center h-full">
+                                <div class="bg-white rounded-full p-3 mr-[20px]">
+                                    <img src="assets/calender.png">
+                                </div>
+                                <div>
+                                    <p id="day" class="text-[22px] font-normal poppins">
+                                        <!-- JS DAY -->
+                                    </p>
+                                    <p id="date" class="font-bold poppins text-[22px]">
+                                        <!-- JS date -->
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr class="border-t-2 border-dashed border-indigo-500/20">
+                <div class="p-6">
+                    <div class="grid grid-cols-3 gap-6">
+                        <div class="bg-[#F4F7FF] rounded-lg">
+                            <div class="p-6">
+                                <div class="p-2 bg-white rounded-lg w-fit">
+                                    <p class="text-base font-normal text-[#00303C]">ShopEase</p>
+                                </div>
+                                <div class="py-5">
+                                    <p id="ShopEase" class="text-2xl font-medium">Fix Mobile Button Issue</p>
+                                </div>
+                                <div class="bg-white p-5 rounded-lg h-[92px] overflow-hidden">
+                                    <p class="text-base font-normal line-clamp-2 opacity-50">
+                                        Debug using Chrome DevTools, check for overlapping elements, and ensure onClick
+                                        works properly and ensure onClick works properly
+                                    </p>
+                                </div>
+                                <hr class="border-t-2 my-5 border-dashed border-indigo-500/20">
+                                <div class="flex justify-between items-center">
+                                    <div>
+                                        <p class="text-[14px] font-normal">Deadline</p>
+                                        <p class="text-base font-medium">21 March 2025</p>
+                                    </div>
+                                    <div>
+                                        <button id="ShopEase_btn" type="button"
+                                            class="px-5 py-2 text-base font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Completed</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-[#F4F7FF] rounded-lg">
+                            <div class="p-6">
+                                <div class="p-2 bg-white rounded-lg w-fit">
+                                    <p class="text-base font-normal text-[#00303C]">CloudSync</p>
+                                </div>
+                                <div class="py-5">
+                                    <p id="CloudSync" class="text-2xl font-medium">Add Dark Mode</p>
+                                </div>
+                                <div class="bg-white p-5 rounded-lg h-[92px] overflow-hidden">
+                                    <p class="text-base font-normal line-clamp-2 opacity-50">
+                                        Store the user's preference in localStorage, update CSS variables dynamically,
+                                        and apply a smooth transition effect.
+                                    </p>
+                                </div>
+                                <hr class="border-t-2 my-5 border-dashed border-indigo-500/20">
+                                <div class="flex justify-between items-center">
+                                    <div>
+                                        <p class="text-[14px] font-normal">Deadline</p>
+                                        <p class="text-base font-medium">21 March 2025</p>
+                                    </div>
+                                    <div>
+                                        <button id="CloudSync_btn" type="button"
+                                            class="px-5 py-2 text-base font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Completed</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-[#F4F7FF] rounded-lg">
+                            <div class="p-6">
+                                <div class="p-2 bg-white rounded-lg w-fit">
+                                    <p class="text-base font-normal text-[#00303C]">SwiftPay</p>
+                                </div>
+                                <div class="py-5">
+                                    <p id="SwiftPay" class="text-2xl font-medium">Optimize Home page</p>
+                                </div>
+                                <div class="bg-white p-5 rounded-lg h-[92px] overflow-hidden">
+                                    <p class="text-base font-normal line-clamp-2 opacity-50">
+                                        Debug using Chrome DevTools, check for overlapping elements, and ensure onClick
+                                        works properly and ensure onClick works properly
+                                    </p>
+                                </div>
+                                <hr class="border-t-2 my-5 border-dashed border-indigo-500/20">
+                                <div class="flex justify-between items-center">
+                                    <div>
+                                        <p class="text-[14px] font-normal">Deadline</p>
+                                        <p class="text-base font-medium">21 March 2025</p>
+                                    </div>
+                                    <div>
+                                        <button id="SwiftPay_btn" type="button"
+                                            class="px-5 py-2 text-base font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Completed</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-[#F4F7FF] rounded-lg">
+                            <div class="p-6">
+                                <div class="p-2 bg-white rounded-lg w-fit">
+                                    <p class="text-base font-normal text-[#00303C]">Meta</p>
+                                </div>
+                                <div class="py-5">
+                                    <p id="Meta" class="text-2xl font-medium">Add new emoji 🤲</p>
+                                </div>
+                                <div class="bg-white p-5 rounded-lg h-[92px] overflow-hidden">
+                                    <p class="text-base font-normal line-clamp-2 opacity-50">
+                                        Debug using Chrome DevTools, check for overlapping elements, and ensure onClick
+                                        works properly and ensure onClick works properly
+                                    </p>
+                                </div>
+                                <hr class="border-t-2 my-5 border-dashed border-indigo-500/20">
+                                <div class="flex justify-between items-center">
+                                    <div>
+                                        <p class="text-[14px] font-normal">Deadline</p>
+                                        <p class="text-base font-medium">21 March 2025</p>
+                                    </div>
+                                    <div>
+                                        <button id="Meta_btn" type="button"
+                                            class="px-5 py-2 text-base font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Completed</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-[#F4F7FF] rounded-lg">
+                            <div class="p-6">
+                                <div class="p-2 bg-white rounded-lg w-fit">
+                                    <p class="text-base font-normal text-[#00303C]">Google LLC</p>
+                                </div>
+                                <div class="py-5">
+                                    <p id="Google" class="text-2xl font-medium">Integrate OpenAI API</p>
+                                </div>
+                                <div class="bg-white p-5 rounded-lg h-[92px] overflow-hidden">
+                                    <p class="text-base font-normal line-clamp-2 opacity-50">
+                                        Debug using Chrome DevTools, check for overlapping elements, and ensure onClick
+                                        works properly and ensure onClick works properly
+                                    </p>
+                                </div>
+                                <hr class="border-t-2 my-5 border-dashed border-indigo-500/20">
+                                <div class="flex justify-between items-center">
+                                    <div>
+                                        <p class="text-[14px] font-normal">Deadline</p>
+                                        <p class="text-base font-medium">21 March 2025</p>
+                                    </div>
+                                    <div>
+                                        <button id="GLC_btn" type="button"
+                                            class="px-5 py-2 text-base font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Completed</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-[#F4F7FF] rounded-lg">
+                            <div class="p-6">
+                                <div class="p-2 bg-white rounded-lg w-fit">
+                                    <p class="text-base font-normal text-[#00303C]">Glassdoar</p>
+                                </div>
+                                <div class="py-5">
+                                    <p id="Glassdoar" class="text-2xl font-medium">Improve Job searching</p>
+                                </div>
+                                <div class="bg-white p-5 rounded-lg h-[92px] overflow-hidden">
+                                    <p class="text-base font-normal line-clamp-2 opacity-50">
+                                        Debug using Chrome DevTools, check for overlapping elements, and ensure onClick
+                                        works properly and ensure onClick works properly
+                                    </p>
+                                </div>
+                                <hr class="border-t-2 my-5 border-dashed border-indigo-500/20">
+                                <div class="flex justify-between items-center">
+                                    <div>
+                                        <p class="text-[14px] font-normal">Deadline</p>
+                                        <p class="text-base font-medium">21 March 2025</p>
+                                    </div>
+                                    <div>
+                                        <button id="Gd_btn" type="button"
+                                            class="px-5 py-2 text-base font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Completed</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-span-1 bg-white rounded-lg">
+                <div class="px-6 pt-6">
+                    <div class="flex flex-row justify-center">
+                        <img src="assets/activity.png" class="pr-3">
+                        <p class="font-medium font-[20px]">Activity Log</p>
+                    </div>
+                    <div class="flex justify-center pt-5">
+                        <button id="History_btn" type="button"
+                            class="px-5 py-2 text-base font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Clear
+                            History</button>
+                    </div>
+                </div>
+                <hr class="border-t-2 my-4 border-dashed border-indigo-500/20">
+                <div id="Activity" class="p-6">
+                    <!-- JS -->
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- JS -->
+    <script src="index.js"></script>
+
+</body>
+
+</html>
